@@ -5,6 +5,7 @@ import AboutUs from "./Pages/AboutUs/AboutUs";
 import TrandingSlider from "./Pages/HomePage/component/TrandingSlider/TrandingSlider";
 import BlogPostPage from "./Pages/HomePage/component/BlogPostpage/BlogPostPage";
 import PersonalisedTrips from "./Pages/PersonalisedTrips/PersonalisedTrips";
+import CorporatePage from "./Pages/CorporatePage/CorporatePage";
 
 const slideData = [
   {
@@ -51,7 +52,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/personalised-trips" element={<PersonalisedTrips />} />
-        <Route path="/corporate-trips" element={<div />} />
+        <Route path="/corporate-trips" element={<CorporatePage />} />
         <Route path="/group-trips" element={<div />} />
         <Route path="/about" element={<AboutUs />} />
         <Route path="/blog" element={<TrandingSlider />} />

@@ -1,0 +1,41 @@
+.mainContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+    margin-top: 80px;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.textContainer{
+    display: flex;
+    width: 38%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.textContainer h3{
+    color: #d897f0;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.textContainer h1{
+    font-weight: 600;
+}
+
+.textContainer p{
+    text-align: justify;
+}
+
+.imageContainer{
+    width: 35%;
+    aspect-ratio: 16/9;
+    position:sticky;
+}
+
+.imageContainer img{
+    width: 100%;
+    border-radius: 5px;
+}

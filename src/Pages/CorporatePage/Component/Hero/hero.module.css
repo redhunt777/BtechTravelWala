@@ -1,0 +1,38 @@
+.mainContainer{
+    background-image: url('/summer-concept-with-elements.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding-bottom: 80px;
+}
+
+
+.heroContainer{
+    display: flex;
+    justify-content: center;
+    height: 25rem;
+    color: white;
+    flex-direction: column;
+}
+
+.heroContainer h1{
+    font-family: "Montserrat", sans-serif;
+    font-size: 4rem;
+    font-weight: 600;
+    padding:  0 0 0 10rem;
+    margin: 0;
+}
+
+.heroContainer p{
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding: 0 0 0 10rem;
+    margin: 15px 0 0 0;
+}
+
+.heroContainer div{
+    margin: 15px 0 0 0;
+    padding: 0 0 0 10rem;
+}
