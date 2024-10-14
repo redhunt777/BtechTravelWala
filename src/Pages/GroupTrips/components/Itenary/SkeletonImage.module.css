@@ -1,0 +1,55 @@
+.skeletonContainer {
+  display: flex;
+  justify-content: space-between; /* Ensure space is distributed evenly between columns */
+  align-items: stretch; /* Ensure columns align in height */
+  width: 100%; /* Make the container take the full width of the screen */
+  gap: 20px; /* Add some space between the columns */
+}
+
+.leftColumn,
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between rows */
+  flex: 1; /* Both columns take equal space, can be adjusted if needed */
+}
+
+.skeletonGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between images */
+}
+
+.rightColumn {
+  justify-content: stretch; /* Ensure the image takes up the full column height */
+}
+
+.skeleton, .loadedImage {
+  width: 100%; /* Stretch the images to the width of the column */
+  height: 200px; /* Set uniform height for images */
+  background-color: #ccc; /* Placeholder color for skeletons */
+  object-fit: cover; /* Ensures images fill the space without distortion */
+  border-radius: 8px; /* Adds slight rounded corners */
+}
+
+.rightColumn img {
+  height: 100%; /* Make the image fill the entire right column height */
+  object-fit: cover; /* Ensure the image fills the space properly */
+}
+
+.skeleton {
+  animation: pulse 1.5s infinite; /* Pulsing animation for loading skeleton */
+}
+
+/* Pulsing animation for skeleton loaders */
+@keyframes pulse {
+  0% {
+    background-color: #e0e0e0;
+  }
+  50% {
+    background-color: #c0c0c0;
+  }
+  100% {
+    background-color: #e0e0e0;
+  }
+}

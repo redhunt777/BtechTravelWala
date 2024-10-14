@@ -7,6 +7,7 @@ import BlogPostPage from "./Pages/HomePage/component/BlogPostpage/BlogPostPage";
 import PersonalisedTrips from "./Pages/PersonalisedTrips/PersonalisedTrips";
 import GroupTripPage from "./Pages/GroupTrips/GroupTrips"; 
 import ScrollToTop from "./ScrollToTop";
+import CorporatePage from "./Pages/CorporatePage/CorporatePage";
 
 // JSON object containing trip details
 const groupTripsData = {
