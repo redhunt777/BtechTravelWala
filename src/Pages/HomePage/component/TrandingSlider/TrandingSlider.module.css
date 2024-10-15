@@ -1,5 +1,4 @@
 .collection {
-  /* background-color:  rgb(240, 239, 246); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -8,49 +7,28 @@
   padding: 25px 0px;
 }
 
- .content {
+.content {
   height: 28rem;
   width: 25rem;
-  /* border: 0.2rem solid rgb(85, 85, 85); */
   border-radius: 0.7rem;
   background-color: #fff;
-  /* border-bottom: 0.2rem solid rgb(85, 85, 85); */
-  /* border-top: 0.2rem solid rgb(85, 85, 85); */
   overflow: hidden;
-  position: relative; 
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.5rem;
   text-align: justify;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
-
 }
-
-
 
 .content img {
   width: 100%;
   aspect-ratio: 17/8;
-  object-fit: cover; 
+  object-fit: cover;
 }
 
-/* .text-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  color: #fff;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  text-align: justify;
-
-} */
-
-.textContent{
+.textContent {
   padding: 20px;
 }
 
@@ -64,7 +42,7 @@
 .textContent p {
   font-size: 1rem !important;
   text-align: justify !important;
-  margin-bottom: 10px ;
+  margin-bottom: 10px;
 }
 
 .btnnew {
@@ -76,7 +54,7 @@
   border-radius: 0.5rem;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  color: #000000; 
+  color: #000000;
 }
 
 .btnnew:hover {
@@ -95,9 +73,30 @@
   margin: 0 auto 20px auto;
   padding-top: 20px;
   font-family: "Montserrat", sans-serif;
-
-  /* background-color: rgba(0, 0, 0, 0.4);  */
 }
-/* .heavy{
-  margin: 4.5px;
-} */
+
+.buttonContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  bottom: 20px;
+  z-index: 10; 
+}
+
+.buttonContainer .prev,
+.buttonContainer .next {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.buttonContainer .prev:hover,
+.buttonContainer .next:hover {
+  transform: scale(1.2);
+  color: #007bff;
+}
