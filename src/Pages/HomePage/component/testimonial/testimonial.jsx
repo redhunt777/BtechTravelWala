@@ -3,8 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import { Pagination, Autoplay } from "swiper/modules";
+import { Pagination, Autoplay,Navigation, EffectCoverflow } from "swiper/modules";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 // import { Pagination, Autoplay } from 'swiper';
+// import styles from "./testimonial.css";
 import "./testimonial.css";
 
 const data = [
@@ -43,6 +46,7 @@ const data = [
     desc: "Our trip was elevated to a whole new level thanks to this travel service. Their dedication to crafting a personalized experience was evident in every detail. The accommodations were top-notch, and the planned activities were both engaging and enjoyable. It was an unforgettable adventure that exceeded all our expectations.",
     img: "data:image/jpeg;base64,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",
   },
+  
   {
     id: 6,
     name: "Kapil Sharma",
@@ -65,11 +69,16 @@ const Testimonial = () => {
       <div>
         <h2 className="textcontainer">Happy Client Works</h2>
         <Swiper
-          modules={[Pagination, Autoplay]}
+          modules={[Pagination, Autoplay,Navigation,EffectCoverflow]}
           slidesPerView={1}
+          loop={true}
           spaceBetween={30}
           autoplay={{ delay: 10000 }}
           pagination={{ clickable: true }}
+          navigation={{
+            nextEl: '.next',
+            prevEl: '.prev',
+          }}
           className="mySwiper container"
         >
           {data.map((item) => {
@@ -98,9 +107,24 @@ const Testimonial = () => {
             );
           })}
         </Swiper>
+
+        <div className="buttonContainer">
+          <button className="prev" aria-label="Prev Slide">
+            <FontAwesomeIcon icon={faChevronLeft} />
+          </button>
+          <button className="next" aria-label="Next Slide">
+            <FontAwesomeIcon icon={faChevronRight} />
+          </button>
+        </div>
       </div>
     </section>
   );
 };
 
 export default Testimonial;
+
+
+
+
+
+
