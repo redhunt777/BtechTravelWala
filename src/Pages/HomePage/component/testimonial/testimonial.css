@@ -11,15 +11,15 @@
 }
 
 .textcontainer {
-  font-size: 2rem; /* Adjust as needed */
+  font-size: 2rem; 
   margin: 1.8rem;
   margin-bottom: 0.9rem;
   font-weight: bold;
   background-image: linear-gradient(316deg, #50d8d7 0%, #d897f0 74%);
   background-clip: text;
-  -webkit-background-clip: text; /* Required for some browsers */
-  color: transparent; /* Makes the text color transparent so the background shows through */
-  -webkit-text-fill-color: transparent; /* Required for some browsers */
+  -webkit-background-clip: text; 
+  color: transparent; 
+  -webkit-text-fill-color: transparent; 
 }
 
 :root {
@@ -90,4 +90,29 @@
 }
 .cient-data-details{
   background-color: transparent;
+}
+.buttonContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  bottom: 20px;
+  z-index: 10; 
+}
+
+.buttonContainer .prev,
+.buttonContainer .next {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 2rem;
+  color: #000;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.buttonContainer .prev:hover,
+.buttonContainer .next:hover {
+  transform: scale(1.2);
+  color: #007bff;
 }
